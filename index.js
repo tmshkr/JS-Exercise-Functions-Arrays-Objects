@@ -80,7 +80,9 @@ function makeSmartPerson(name) {
   return {
     name,
     sum: (a, b) => a + b,
-    speak: () => `Hello, my name is ${name}`
+    speak: function() {
+      return `Hello, my name is ${this.name}`;
+    }
   };
 }
 
